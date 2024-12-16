@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Service</title>
+    <link rel="stylesheet" href="select_printer.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <div>Trang chủ >> In tài liệu</div>
+      </header>
+
+      <div class="content">
+        <!-- Sidebar for Filters -->
+        <aside class="filters">
+          <div class="filter-title">Bộ lọc</div>
+          <div class="filter-item">
+            <label for="search">Nhập id máy in:</label>
+            <div class="search-bar">
+              <input type="text" id="search" class="search-input" placeholder="Nhập id máy in...">
+              <button class="search-button">🔍</button>
+            </div>
+          </div>
+          <div class="filter-item">
+            <label for="status">Tình trạng:</label>
+            <select id="status" class="filter-dropdown">
+              <option value="all">Tất cả</option>
+              <option value="available">Đang trống</option>
+              <option value="in-use">Đang sử dụng</option>
+              <option value="maintenance">Đang bảo trì</option>
+            </select>
+          </div>
+          <div class="filter-item">
+            <label for="location">Cơ sở:</label>
+            <select id="location" class="filter-dropdown">
+              <option value="1">Cơ sở 1</option>
+              <option value="2">Cơ sở 2</option>
+            </select>
+          </div>
+          <div class="filter-item">
+            <label for="building">Tòa nhà:</label>
+            <select id="building" class="filter-dropdown">
+              <option value="all">Tất cả</option>
+              <option value="a2">A2</option>
+              <option value="b4">B4</option>
+            </select>
+          </div>
+          <div class="filter-item">
+            <label for="color">In màu:</label>
+            <select id="color" class="filter-dropdown">
+              <option value="yes">Có</option>
+              <option value="no">Không</option>
+            </select>
+          </div>
+          <button class="apply-button">Áp dụng</button>
+          <div class="result-count">Kết quả: 20 máy in</div>
+        </aside>
+
+        <!-- Main Content for Printers -->
+        <main class="printers">
+          <div class="printer-card available">
+            <div class="status">Đang trống</div>
+            <div class="name">A2-01</div>
+            <div class="details">HP LaserJet MFP M236dw<br>Cơ sở 1, Tầng trệt, A2</div>
+          </div>
+          <div class="printer-card in-use">
+            <div class="status">Đang sử dụng</div>
+            <div class="name">B4-03</div>
+            <div class="details">HP Laser 107a 4ZB77A<br>Cơ sở 1, P. 302, B4</div>
+          </div>
+          <div class="printer-card maintenance">
+            <div class="status">Đang bảo trì</div>
+            <div class="name">H3-01</div>
+            <div class="details">HP LaserJet MFP M236dw<br>Cơ sở 2, P. 302, H3</div>
+          </div>
+          <div class="printer-card available selected">
+            <div class="status">Đang trống</div>
+            <div class="name">B4-02</div>
+            <div class="details">HP Laser 107a 4ZB77A<br>Cơ sở 1, P. 302, B4</div>
+          </div>
+        </main>
+      </div>
+
+      <footer class="footer">
+        <div class="selected-printer">Máy in đã chọn: <span id="selectedPrinter"><strong>B4-02</strong></span></div>
+        <button class="ok-button" onclick="selectPrinter()">OK</button>
+      </footer>
+    </div>
+
+    <script>
+      function selectPrinter()
+      {
+        const printerKey = "printer";
+        var selectedPrinter = document.getElementById("selectedPrinter").innerHTML;
+        sessionStorage.setItem(printerKey, selectedPrinter);
+        window.location.href = "../print/index.html";
+      }
+    </script>
+
+  </body>
+
+</html>

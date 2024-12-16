@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .header {
+    background-color: #0688B4;
+    color: #FFF;
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .content {
+    display: flex;
+  }
+  
+  .filters {
+    width: 250px;
+    padding: 20px;
+    background: #EBEFFB;
+    border-right: 1px solid #CCC;
+    border-radius: 0 0 0 10px;
+  }
+  
+  .filter-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .filter-item {
+    margin-bottom: 15px;
+  }
+  
+  .filter-dropdown,
+  .search-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+  }
+  
+  .search-bar {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .search-button {
+    padding: 8px;
+    background-color: #0688B4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .apply-button {
+    padding: 10px 15px;
+    background: #85B289;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .result-count {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .printers {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .printer-card {
+    width: 200px;
+    padding: 15px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .printer-card.available .status {
+    color: #155F1C;
+  }
+  
+  .printer-card.in-use .status {
+    color: #7C4C54;
+  }
+  
+  .printer-card.maintenance .status {
+    color: #9B948A;
+  }
+  
+  .printer-card.selected {
+    border: 2px solid #85B289;
+  }
+  
+  .footer {
+    background-color: #0688B4;
+    padding: 10px;
+    text-align: center;
+    color: #FFF;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .ok-button {
+    padding: 10px 20px;
+    background: #4C8CBA;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

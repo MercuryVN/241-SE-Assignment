@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link href="student.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <header class="text-white p-3">
+
+            <div class="container d-flex justify-content-between align-items-center">
+
+                <div class="d-flex align-items-center">
+
+                    <h1>DỊCH VỤ IN THÔNG MINH DÀNH CHO SINH VIÊN</h1>
+
+                </div>
+
+                <nav>
+
+                    <ul class="nav" id="navBarItem">
+
+                        <li class="nav-item"><a href="#" class="nav-link text-white">Trang chủ</a></li>
+                        <li class="nav-item"><a href="../print/index.html" class="nav-link text-white">In tài liệu</a></li>
+                        <li class="nav-item"><a href="../buy_page/index.html" class="nav-link text-white">Mua thêm trang</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-white">Xem lịch sử</a></li>
+
+                    </ul>
+
+                </nav>
+
+            </div>
+
+        </header>
+
+        <main class="container">
+
+            <div class="container mt-4">
+
+                <div class="mb-3" style="display: flex; justify-content: flex-end;">
+
+                    <div class="row" style="width: 300px;">
+
+                        <div class="col-md-7 text-end m-0 p-0">
+
+                            <div class="center">
+
+                                <span>Nguyễn Văn A</span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-2">
+
+                            <img src="https://img.icons8.com/color/48/test-account.png" alt="home">
+
+                        </div>
+
+                        <div class="col-md-3">
+
+                            <div class="notify-button">
+
+                                <div class="dropdown">
+
+                                    <button class="dropbtn">
+
+                                        <img src="https://img.icons8.com/ultraviolet/240/appointment-reminders.png" alt="notify" class="w-100 h-100">
+
+                                    </button>
+
+                                    <div class="dropdown-content">
+
+                                        <a href="#">Thanh toán thành công! - <i> 22:38 2/12/2024</i></a>
+                                        <a href="#">In file thành công! - <i>9:16 1/12/2024</i></a>
+                                        <a href="#">Website sẽ được bảo trì từ 11:00 29/11/2024 đến 23:00 29/11/2024 - <i>00:00 27/11/2024</i></a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row" style="width: 200px;">
+
+                    <div class="col-md-4">
+
+                        <img src="https://img.icons8.com/ultraviolet/40/home--v1.png" alt="home">
+
+                    </div>
+
+                    <div class="col-md-8 text-start m-0 p-0">
+
+                        <div class="center">
+
+                            <h4>Trang chủ</h4>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <p>Bạn hiện còn: <span id="remainingPages" class="remaining-pages">0</span> trang</p>
+
+                <hr style="height:3px;border-width:0;color:#1aaac4;background-color:#1aaac4">
+
+                <div class="row text-center">
+
+                    <div class="col-md-4">
+
+                        <div class="card shadow">
+
+                            <button type="button" class="btn" onclick="toPrint()">
+
+                                <div class="row">
+
+                                    <div class="col-md-6">
+
+                                        <img src="https://img.icons8.com/color/480/print.png" class="big-icon">
+
+                                    </div>
+
+                                    <div class="col-md-6">
+
+                                        <div class="center">
+
+                                            <h3>IN TÀI LIỆU</h3>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <div class="card shadow">
+
+                            <button type="button" class="btn" onclick="toBuy()">
+
+                                <div class="row">
+
+                                    <div class="col-md-6">
+
+                                        <img src="https://img.icons8.com/fluency/480/buy.png" class="big-icon">
+
+                                    </div>
+
+                                    <div class="col-md-6">
+
+                                        <div class="center">
+
+                                            <h3>MUA THÊM TRANG</h3>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <div class="card shadow">
+
+                            <button type="button" class="btn" onclick="toLog()">
+
+                                <div class="row">
+
+                                    <div class="col-md-6">
+
+                                        <img src="https://img.icons8.com/pulsar-color/480/log.png" class="big-icon">
+
+                                    </div>
+
+                                    <div class="col-md-6">
+
+                                        <div class="center">
+
+                                            <h3>XEM LỊCH SỬ IN</h3>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <script src="student.js"></script>
+
+        </main>
+
+        <footer class="text-white text-center p-1">
+
+            <div class="row w-100">
+
+                <div class="col-md-6 d-flex justify-content-center align-items-center">
+
+                    <img src="../asset/bk_logo.png" alt="Company Logo" class="me-2">
+                    <h1 class="h4 mb-0">Trường Đại học Bách khoa TP. HCM - ĐHQG TP. HCM</h1>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="center">
+
+                        <div class="row">
+
+                            <div class="col-md-4 d-flex justify-content-center align-items-center">
+
+                                <a href="#" class="text-white">Hướng dẫn sử dụng</a>
+
+                            </div>
+
+                            <div class="col-md-4 d-flex justify-content-center align-items-center">
+
+                                <a href="#" class="text-white">Góp ý chất lượng/Báo cáo sự cố</a>
+
+                            </div>
+
+                            <div class="col-md-4 d-flex justify-content-center align-items-center">
+
+                                <a href="#" class="text-white">Chính sách bảo mật</a>
+
+                            </div>
+
+                        </div>
+
+                        <div>
+
+                            <p>&copy; 2024 Bản quyền website thuộc Trường Đại học Bách khoa HCM</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </body>
+
+</html>
